@@ -33,7 +33,7 @@ jobs:
         image: pavankumar789/gitactions
         tags: shippings
         registry: docker.io
-        dockerfile: ./Dockerfile
+        dockerfile: ./docker/Dockerfile
     - name: current directory
       run: pwd
     - name: where is target
