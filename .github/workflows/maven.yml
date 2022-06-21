@@ -23,7 +23,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -DskipTests --file pom.xml
     - name:  Login Docker
       run: |
         echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "pavankumar789" --password-stdin
