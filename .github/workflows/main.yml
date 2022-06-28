@@ -69,6 +69,6 @@ jobs:
           DOCKER_USER: pavan
           DOCKER_PASS: ${{ secrets.HARBOR_PASS }}
         with:
-          destination_container_repo: http://172.16.238.123/test
+          destination_container_repo: http://172.16.238.123/
           provider: harbor2
          # readme_file: 'README.md'
