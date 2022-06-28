@@ -63,22 +63,22 @@ jobs:
           image: pavankumar789/gitactions
           # tag_with_ref: true
           # tag_with_sha: true
-#       - name: push README to Dockerhub
-#         uses: christian-korneck/update-container-description-action@v1
-#         env:
-#           DOCKER_USER: pavan
-#           DOCKER_PASS: ${{ secrets.HARBOR_PASS }}
-#         with:
-#           destination_container_repo: http://172.16.238.123/
-#           provider: harbor2
-#          # readme_file: 'README.md'
+      - name: push README to Dockerhub
+        uses: christian-korneck/update-container-description-action@v1
+        with:
+          registry: goharbor.io
+          destination_container_repo: http://172.16.238.123/
+          provider: harbor2
+          username: pavan
+          password: ${{ secrets.HARBOR_PASSWORD }}
+         # readme_file: 'README.md'
 
         # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
-      - name: Log into registry 
-        if: github.event_name != 'pull_request'
-        uses: christian-korneck/update-container-description-action@v1
-        with:
-          registry: http://172.16.238.123/harbor
-          username: pavan
-          password: ${{ secrets.HARBOR_PASSWORD }}
+#       - name: Log into registry 
+#         if: github.event_name != 'pull_request'
+#         uses: christian-korneck/update-container-description-action@v1
+#         with:
+#           registry: http://172.16.238.123/harbor
+#           username: pavan
+#           password: ${{ secrets.HARBOR_PASSWORD }}
