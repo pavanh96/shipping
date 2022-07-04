@@ -76,7 +76,7 @@ jobs:
       - name: Build and Push ECR
         id: build-image
         env:
-          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REGISTRY: public.ecr.aws/z1i5d8y3/devops-tech
           ECR_REPOSITORY: devops-tech
           IMAGE_TAG: latest
         run: |
