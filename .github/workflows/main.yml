@@ -63,12 +63,12 @@ jobs:
           image: pavankumar789/gitactions
           # tag_with_ref: true
           # tag_with_sha: true
-#       - name: Configure AWS credientionals
-#         uses: aws-actions/configure-aws-credentinals@v1
-#         with:
-#           access_key_id: ${{ secrets.AWS_ACCESSKEY }}
-#           secret_access_key: ${{ secrets.AWS_SECRETKEY }}
-#           region: ue-east-2
+      - name: Configure AWS credientionals
+        uses: aws-actions/configure-aws-credentinals@v1
+        with:
+          access_key_id: ${{ secrets.AWS_ACCESSKEY }}
+          secret_access_key: ${{ secrets.AWS_SECRETKEY }}
+          region: ue-east-2
 #       - name: login to AWS ECR
 #         id: login-ecr
 #         uses: aws-actions/amazon-ecr-login@v1
